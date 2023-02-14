@@ -138,11 +138,13 @@ let result = {
 const applicationsStatics = (arr) => {
     // write your code here
     for (let i = 0; i < arr.length; i++) {
+
         result.totalApplicants = result.totalApplicants + 1;
+            
         if (arr[i].firstName == null && arr[i].lastName == null && arr[i].yearsOfExperience <= 1) {
-
-            result.totalApplicants = result.rejectedApplicants + 1;
-
+            
+            result.rejectedApplicants = result.rejectedApplicants + 1;
+            
             switch (arr[i].tech) {
                 case "JS":
                     result.javaScript_devs = result.javaScript_devs + 1;
@@ -161,6 +163,7 @@ const applicationsStatics = (arr) => {
     }
     return result;
 };
+
 // applicationsStatics(cvs);
 // -------------------------------------------------------------------------------------------------------
 
@@ -274,6 +277,7 @@ const classesAvg = (data) => {
     // write your code here
 
 };
+classesAvg(data);
 // -------------------------------------------------------------------------------------------------------
 
 module.exports = { objLat, cvFormatter, applicationsStatics, classesAvg };
