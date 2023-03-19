@@ -44,15 +44,10 @@ const wordLength = (str) => {
 
 const wordLetters = (str1, str2) => {
     // write your code here
-    if (str1.length == str2.length) {
-        for (let i = 0; i < str1.length; i++) {
-            if (str2.includes(str1[i])) {
-                return true
-            }
-        }
-    } else {
-        return false
-    }
+    str1 = str1.split('').sort().join('');
+    str2 = str2.split('').sort().join('');
+    console.log(str1 === str2)
+    return str1 === str2;
 }
 
 
